@@ -20,6 +20,8 @@ if ($_SERVER['PHP_AUTH_USER'] !== $valid_username || $_SERVER['PHP_AUTH_PW'] !==
     echo 'Nom d\'utilisateur ou mot de passe incorrect.';
     exit;
 }
+
+// Si les identifiants sont corrects, afficher la page protégée
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -29,11 +31,22 @@ if ($_SERVER['PHP_AUTH_USER'] !== $valid_username || $_SERVER['PHP_AUTH_PW'] !==
     <title>Page protégée</title>
 </head>
 <body>
-    <h1>Bienvenue sur la page protégée</h1>
-    <p>Ceci est une page protégée par une authentification simple via le header HTTP</p>
-    <p>C'est le serveur qui vous demande un nom d'utilisateur et un mot de passe via le header WWW-Authenticate</p>
-    <p>Aucun système de session ou cookie n'est utilisé pour cet atelier</p>
-    <p>Vous êtes connecté en tant que : <?php echo htmlspecialchars($_SERVER['PHP_AUTH_USER']); ?></p>
+    <!-- Section publique -->
+    <h1>Bienvenue</h1>
+    <p>Cette partie est accessible à tout le monde.</p>
+    <hr>
+
+    <!-- Section protégée -->
+    <h1>Section protégée</h1>
+    <p>Ceci est une page protégée par une authentification via le header HTTP.</p>
+    <p>Vous êtes connecté en tant que : <strong><?php echo htmlspecialchars($_SERVER['PHP_AUTH_USER']); ?></strong></p>
+    <p>Le mot de passe utilisé est : <strong><?php echo htmlspecialchars($_SERVER['PHP_AUTH_PW']); ?></strong></p>
+    
+    <!-- Explication -->
+    <p>Pour accéder à cette page, le serveur a utilisé le header <code>WWW-Authenticate</code> pour demander vos identifiants.</p>
+    <p>Aucun système de session ou de cookie n'est utilisé dans cet exemple.</p>
+
+    <hr>
     <a href="../index.html">Retour à l'accueil</a>  
 </body>
 </html>
