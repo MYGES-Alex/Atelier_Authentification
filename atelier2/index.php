@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
 
     // Vérification des identifiants (statique)
-    if ($username === 'admin' && $password === 'admin') {
+    if ($username === 'admin' && $password === 'secret') {
         // Initialiser le cookie avec le jeton unique
         setcookie('authToken', $_SESSION['authToken'], time() + 60, '/', '', false, true);// Le Cookie est initialisé et valable pendant 1 minutes
         header('Location: page_admin.php');
