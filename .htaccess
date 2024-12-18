@@ -1,4 +1,4 @@
 AuthName "Accès protégé"
 AuthType Basic
-AuthUserFile /home/{votre_compte_Alwaysdata}/www/.htpasswd
+AuthUserFile /home/esgi-alex/www/.htpasswd
 Require valid-user
