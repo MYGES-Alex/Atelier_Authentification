@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-INSTALLATION DE VOTRE ENVIRONNEMENT DE TRAVAIL
+INSTALLATION DE VOTRE ENVIRONNEMENT DE TRAVAIL 
 ------------------------------------------------------------------------------------------------------
 Quelles sont les notions qui vont être abordées au cours de cet atelier ?
 Cet atelier a pour objectif de vous apprendre à mettre en place place votre environnement de travail dans le cadre de votre module d'apprentissage sur les systèmes d'authentification. 
