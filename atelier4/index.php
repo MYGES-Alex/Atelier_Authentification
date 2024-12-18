@@ -20,6 +20,7 @@ if ($_SERVER['PHP_AUTH_USER'] !== $valid_username || $_SERVER['PHP_AUTH_PW'] !==
     echo 'Nom d\'utilisateur ou mot de passe incorrect.';
     exit;
 }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
